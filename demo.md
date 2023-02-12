@@ -58,7 +58,7 @@ open vite in browser.
 2. Delete app.css
 3. delete contents of index.css
 
-> The fist thing we need is a model for the todo items - we'll call it the Task model
+> The first thing we need is a model for the todo items - we'll call it the Task model
 
 4. add `shared/Task.ts`
 
@@ -82,7 +82,7 @@ function App() {
   </>
 }
 ```
-
+---
 > let's add a checkbox that indicates the "completed" state of each task
 
 ```html

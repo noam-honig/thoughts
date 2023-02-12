@@ -30,6 +30,17 @@ blockquote {
 - Make sure that the file explorer folders are collapsed and you can see frontend and backend
 - open browser at github.com/remult/react-todo.
 ---
+# Very short
+* Review react - Task entity, add, tick, setAll, delete
+* Review backend index
+* Decorate Task and register on index
+* Demo using postman, and post 3 tasks (setup,api,sleep (completed))
+  * Consider using postgres at this stage
+* Use repo in the frontend
+* CRUD
+* Validation 
+* Backend Method
+---
 # Short remult demo
 ---
 >Hi I’m Noam Honig, and in this short video I’ll introduce you to Remult.

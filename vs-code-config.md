@@ -1,0 +1,1 @@
+Editor > Suggest: Snippets Prevent Quick Suggestions in the Settings UI. - turn on auto complete in snippets
