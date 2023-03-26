@@ -3,7 +3,7 @@ marp: true
 ---
 
 ```sh
-np create vite@latest
+npm create vite@latest
 ```
 
 ```sh
