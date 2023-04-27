@@ -108,39 +108,42 @@ Authentication, Authorization, validation and even realtime updates.
 
 
 1.  Add Decorators
-2.  Add Api & Postgres
-3.  Implement Add
-4.  Implement Change
-5.  Implement Delete
-6.  Show query language
-7.  Add live query
-10. Validation
-12. Authentication
-13. Authorization
+2.  Add Api 
+3.  explain repo
+4.  Implement Add
+5.  Implement Change
+6.  Implement Delete
+7.  Show query language
+8.  Add live query
+9.  Validation
+10. Authentication
+11. Authorization
 
-- Go, Do, Eat, Run, Buy
-- Fix, Pay, Read, Cook, Walk
+- Fix, Pay, Run, Buy, Eat, 
+- Go, Do, Read, Cook, Walk
 - Call, Plan,Clean, Study, Sleep
 - Rest, Work, Relax, Learn, Play
 
-```tsx
-const session = useSession();
-useEffect(() => {
-  if (session.status === "unauthenticated") {
-    signIn();
-    return;
-  }
-  remult.user = session?.data?.user as UserInfo;
-  //...
-}, [session]);
 
-if (session.status !== "authenticated") return <></>;
-//...
-<div>
-  hello {remult.user?.name} <button onClick={() => signOut()}>Sign out</button>
-</div>;
-```
 
-```ts
-getUser: async (req) => findUserById((await getToken({ req }))?.sub),
-```
+> Here we have a front-end react app written with next JS.
+> I've configured remult as a catch all route in next js, 
+> And use postgresql as database, and get the user from nextauth
+>
+> In this Todo app, we can add tasks, complete tasks and delete.
+>
+> It uses the Task type. 
+>
+> Let's have remult expose a full CRUD API for tasks
+>
+> It's as easy as adding these four decorators
+>
+> Register it as an entity - and test our api.
+>
+> Now let's use it in the front add
+>
+> First we'll define a task repository
+> 
+> And we'll use it to get tasks, add, complete and delete
+> 
+> Four lines of code is all this react component needs to query and update tasks on the server..
