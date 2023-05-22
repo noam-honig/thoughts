@@ -3,13 +3,12 @@ marp: true
 ---
 
 ```sh
-npm create vite@latest
+npm create svelte@lates
 ```
 
 ```sh
-npm i express remult tsx
-npm i --save-dev @types/express
-```
+npm i  remult
++-*```
 
 ```sh
 npm run dev
@@ -20,23 +19,15 @@ add src/server/index.ts
 ```json
 "dev-node":"tsx watch src/server"
 ```
-
-add route to server and test
-add remult after entity
-add proxy - when starting to work on frontend
-
 ```json
+"experimentalDecorators":true
+```
+
+```ts
+// vite.config.ts
   server: { proxy: { "/api": "http://localhost:3002" } }
 ```
 
-test from vite
-
----
-
-Add api.ts
-add - experimentalDecorators
-
-# Setup done
 
 ---
 
@@ -51,7 +42,11 @@ Add tasks:
 
 ---
 
-get tasks on the front end and start with css:
+get tasks on the front end
+
+Add form for new task
+
+ and start with css:
 
 ```css
 body {
@@ -62,7 +57,7 @@ body {
 h1 {
   color: #ef4444;
   font-style: italic;
-  font-size: 3.75rem;
+  font-size: 3.5rem;
   font-weight: inherit;
   text-align: center;
   margin: 0;
@@ -81,28 +76,13 @@ main {
 ---
 
 ```css
+main > form,
 main > div {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
   gap: 0.25rem;
-}
-input[type="checkbox"] {
-  height: 1.5rem;
-  width: 1.5rem;
-  flex-shrink: 0;
-}
-```
-
----
-
-Add task
-first add state and html, then the addTask method.
-
-```css
-main > div,
-main > form {
 }
 input {
   font-size: 100%;
@@ -113,24 +93,42 @@ input {
 input:placeholder-shown {
   font-style: italic;
 }
-button {
-  background-color: white;
-  border: 2px solid #0000001a;
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.5rem;
-  white-space: nowrap;
-  font-size: 100%;
-  cursor: pointer;
+input[type="checkbox"] {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
 }
 ```
 
 ---
 
-## REMEMBER LIVE QUERY ADD ISSUE
+```css
+button {
+  background-color: white;
+  border: 2px solid #0000001a;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  white-space: nowrap;
+  font-size: 100%;
+  cursor: pointer;
+}
 
-- skip helmet, compression etc...
-- skip path - just use the static url
-  ```ts
-  app.use(express.static(process.cwd() + "/dist"))
+```
+
+---
+
+
+
+## Live Query
+* ## REMEMBER LIVE QUERY ADD ISSUE
+## Validation
+etc..
+
+## remember retry when talking about signin
+
+- ```ts
+  app.use(express.static(process.cwd() + "/dist"));
   ```
-- use tsx also for start
+- ```ts
+  "start":"tsx src/server`
+  ```

@@ -3,7 +3,7 @@ marp: true
 ---
 
 ```sh
-npm create vite@latest
+ng new
 ```
 
 ```sh
@@ -20,23 +20,24 @@ add src/server/index.ts
 ```json
 "dev-node":"tsx watch src/server"
 ```
-
-add route to server and test
-add remult after entity
-add proxy - when starting to work on frontend
-
 ```json
-  server: { proxy: { "/api": "http://localhost:3002" } }
+"allowSyntheticDefaultImports":true
 ```
-
-test from vite
 
 ---
 
-Add api.ts
-add - experimentalDecorators
-
-# Setup done
+```json
+// proxy.conf.json
+{
+  "/api": {
+    "target": "http://localhost:3002",
+    "secure": false
+  }
+}
+```
+```sh
+"dev": "ng serve --proxy-config proxy.conf.json --open",
+```
 
 ---
 
@@ -51,7 +52,13 @@ Add tasks:
 
 ---
 
-get tasks on the front end and start with css:
+get tasks on the front end
+
+Add form for new task
+
+import FormsModule
+
+ and start with css:
 
 ```css
 body {
@@ -81,28 +88,13 @@ main {
 ---
 
 ```css
+main > form,
 main > div {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
   gap: 0.25rem;
-}
-input[type="checkbox"] {
-  height: 1.5rem;
-  width: 1.5rem;
-  flex-shrink: 0;
-}
-```
-
----
-
-Add task
-first add state and html, then the addTask method.
-
-```css
-main > div,
-main > form {
 }
 input {
   font-size: 100%;
@@ -113,6 +105,16 @@ input {
 input:placeholder-shown {
   font-style: italic;
 }
+input[type="checkbox"] {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+}
+```
+
+---
+
+```css
 button {
   background-color: white;
   border: 2px solid #0000001a;
@@ -122,15 +124,23 @@ button {
   font-size: 100%;
   cursor: pointer;
 }
+
 ```
 
 ---
 
-## REMEMBER LIVE QUERY ADD ISSUE
+
+
+## Live Query
+* ## REMEMBER LIVE QUERY ADD ISSUE
+## Validation
+etc..
+
+## remember retry when talking about signin
 
 - skip helmet, compression etc...
 - skip path - just use the static url
   ```ts
-  app.use(express.static(process.cwd() + "/dist"))
+  app.use(express.static(process.cwd() + "/dist"));
   ```
 - use tsx also for start
