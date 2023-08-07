@@ -1,0 +1,34 @@
+- [x] the backend method issue from the discord
+- [ ] Consider what would have happened without any relations
+- [x] The twitter attention we got on the weekend
+- [x] the herendes heroku behavior
+
+
+## Node TLV
+- [ ] - Starting point:
+  - [ ] front end react app
+    - [ ] Task in model folder. (frontend,backend,model)
+  - [ ] backend
+    - [ ] remult express?
+    - [ ] auth?
+    - [ ] Use database?
+- [ ] Steps:
+  - [ ] Review react app
+  - [ ] Review api folder (express, auth and api)
+  - [ ] Add decorators to task
+    - [ ] add task to api
+    - [ ] review that I have a working api
+  - [ ] Lets use the api in the front end
+    - [ ] define task repository
+    - [ ] get tasks from backend
+    - [ ] insert new tasks
+    - [ ] save changes to tasks
+    - [ ] delete Task
+  - [ ] Demo that CRUD works
+  - [ ] Zoom into find method
+    - [ ] limit, page, orderby 
+  - [ ] Live update
+  - [ ] Validations
+  - [ ] Authorization
+  - [ ] deploy?
+    - [ ] maybe prepare railway in advance
